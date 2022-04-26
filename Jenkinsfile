@@ -5,11 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                git checkout master
-                git checkout . 
-                git pull origin master
-                npm install 
-                npm run build 
             }
         }
         stage('Test') {
