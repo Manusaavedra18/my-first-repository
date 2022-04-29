@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 bat 'npm install'
+                bat 'npm run build'
             }
         }
         stage('Test') {
