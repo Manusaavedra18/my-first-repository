@@ -8,6 +8,7 @@ pipeline {
                 bat 'git checkout master'
                 bat 'git checkout .'
                 bat 'git pull origin master'
+                bat 'rm -r node_modules'
                 bat 'npm install'
                 bat 'npm run build'
             }
