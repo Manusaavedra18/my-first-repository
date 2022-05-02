@@ -8,10 +8,7 @@ pipeline {
                 bat 'git checkout master'
                 bat 'git checkout .'
                 bat 'git pull origin master'
-                bat 'npm run clean'
-                bat 'rm -rf node_modules'
                 bat 'npm install'
-                bat 'npm run build'
             }
         }
         stage('Test') {
