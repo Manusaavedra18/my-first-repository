@@ -5,11 +5,11 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                bat 'git checkout master'
-                bat 'git checkout .'
-                bat 'git pull origin master'
-                bat 'npm install'
-                bat 'npm run build'
+                sh 'git checkout master'
+                sh 'git checkout .'
+                sh 'git pull origin master'
+                sh 'npm install'
+                sh 'npm run build'
             }
         }
         stage('Test') {
